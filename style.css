@@ -73,6 +73,7 @@ section::after
 
 .time{
     color: #f9d924;
+    font-size: 20px;
 }
 
 @media (max-width:600px) {

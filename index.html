@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title> Date & Time</title>
+ 
+</head>
+
+<body>
+  <section class="section">
+  <div class="clock">
+    <div class="container">
+      <h2 id="hour"></h2>    
+  </div>
+  <div class="time">
+  <span id="year">Years</span>
+  </div>
+  </section>
+
+<!-- javascript-->
+  <script>
+        function clock(){
+    let hour= document.getElementById('hour');
+    let year = document.getElementById('year');
+    let h12 = new Date().toLocaleTimeString('es-ES', {hour: '2-digit', minute:'2-digit' , second:'2-digit',hour12:false})
+    let date = new Date().toLocaleDateString('en-EN',{weekday:'long',day: 'numeric', month: 'long' });
+  
+    hour.innerHTML= h12;
+    year.innerHTML= date
+
+}
+var interval =setInterval(clock,100);
+</script> 
+</body>
+
+</html>
